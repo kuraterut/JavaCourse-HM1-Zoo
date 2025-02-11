@@ -1,0 +1,7 @@
+info
+add monkey
+john
+5
+5
+5
+info food

@@ -1,0 +1,11 @@
+Animals list:
+Contact animals list:
+Total Food: 0
+Inventory list:
+Employees list:
+Enter the name of the monkey:
+Enter the food per day of the monkey:
+Enter the health level of the monkey(0-10):
+Enter the kindness level of the monkey(0-10):
+zoo item added
+Total Food: 5
