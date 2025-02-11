@@ -15,6 +15,7 @@ public abstract class Animal implements IAlive, IInventory {
 
     @Override
     public void setFood(int food) {
+        if(food < 0) throw new IllegalArgumentException("health must be more then 0");
         this.food = food;
     }
 
@@ -41,6 +42,7 @@ public abstract class Animal implements IAlive, IInventory {
     }
 
     public void setHealth(int health) {
+        if(health < 0 || health > 10) throw new IllegalArgumentException("health must be between 0 and 10");
         this.health = health;
     }
 }

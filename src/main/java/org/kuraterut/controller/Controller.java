@@ -9,12 +9,12 @@ import java.util.Scanner;
 
 public class Controller {
     private Zoo zoo;
-    private InputStream in;
+    private Scanner scanner;
     private PrintStream out;
 
-    public Controller(Zoo zoo, InputStream in, PrintStream out) {
+    public Controller(Zoo zoo, Scanner scanner, PrintStream out) {
         this.zoo = zoo;
-        this.in = in;
+        this.scanner = scanner;
         this.out = out;
     }
 
@@ -27,7 +27,7 @@ public class Controller {
     }
 
     public void execute() {
-        Scanner scanner = new Scanner(in);
+
 
         while(scanner.hasNextLine()) {
             String input = scanner.nextLine();
@@ -58,7 +58,7 @@ public class Controller {
                         out.println("zoo item not added because of zoo rules");
                     }
                 } catch (Exception e) {
-                    System.out.println(e.getMessage());
+                    out.println(e.getMessage());
                 }
 
             } else if (inputArr[0].equalsIgnoreCase("")) {

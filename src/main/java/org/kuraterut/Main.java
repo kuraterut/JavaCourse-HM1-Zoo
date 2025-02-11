@@ -9,10 +9,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        InputStream inputStream = null;
+        Scanner inputScanner = null;
         PrintStream printStream = null;
         try{
-            inputStream = new FileInputStream("src/main/resources/mainCases/in.txt");
+
+            InputStream inputStream = new FileInputStream("src/main/resources/mainCases/in.txt");
+            inputScanner = new Scanner(inputStream);
             printStream = new PrintStream(new FileOutputStream("src/main/resources/mainCases/out.txt"));
 
 //            inputStream = System.in;
@@ -25,7 +27,7 @@ public class Main {
 
         VeterinaryClinic clinic = new VeterinaryClinic("main veterinary", 5);
         Zoo zoo = new Zoo("main zoo", clinic, printStream);
-        Controller controller = new Controller(zoo, inputStream, printStream);
+        Controller controller = new Controller(zoo, inputScanner, printStream);
 
 //        boolean hasNext = true;
 

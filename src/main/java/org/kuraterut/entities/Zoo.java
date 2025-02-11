@@ -2,7 +2,7 @@ package org.kuraterut.entities;
 
 import org.kuraterut.entities.veterinaryclinic.VeterinaryClinic;
 import org.kuraterut.entities.alives.Animal;
-import org.kuraterut.entities.alives.animals.humans.Employee;
+import org.kuraterut.entities.alives.humans.Employee;
 import org.kuraterut.entities.alives.animals.herbo.Herbo;
 import org.kuraterut.entities.inventory.IInventory;
 

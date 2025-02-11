@@ -1,7 +1,7 @@
 package org.kuraterut.generator;
 
 import org.kuraterut.entities.ZooItem;
-import org.kuraterut.entities.alives.animals.humans.Employee;
+import org.kuraterut.entities.alives.humans.Employee;
 import org.kuraterut.entities.alives.animals.herbo.Monkey;
 import org.kuraterut.entities.alives.animals.herbo.Rabbit;
 import org.kuraterut.entities.alives.animals.predator.Tiger;
@@ -10,7 +10,6 @@ import org.kuraterut.entities.inventory.things.Computer;
 import org.kuraterut.entities.inventory.things.Table;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;

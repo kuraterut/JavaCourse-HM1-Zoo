@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.kuraterut.entities.alives.Animal;
 import org.kuraterut.entities.alives.animals.herbo.Monkey;
+import org.kuraterut.entities.alives.animals.herbo.Rabbit;
 import org.kuraterut.entities.veterinaryclinic.VeterinaryClinic;
 
 import java.util.Scanner;
@@ -28,6 +29,7 @@ public class VeterinaryClinicTest {
     @Test
     public void testVeterinaryClinicUpdate() {
         VeterinaryClinic clinic = new VeterinaryClinic("testclinic", 5);
+
         clinic.setName("anotherTestclinic");
         Assert.assertEquals("anotherTestclinic", clinic.getName());
 
@@ -38,10 +40,16 @@ public class VeterinaryClinicTest {
     @Test
     public void testVeterinaryClinicCheckAnimal() {
         VeterinaryClinic clinic = new VeterinaryClinic("testclinic", 5);
-        Scanner scanner = new Scanner("john\n6\n6\n6");
-        Animal monkey = new Monkey(scanner, System.out);
-        Assert.assertTrue(clinic.checkAnimal(monkey));
+        Scanner scannerMonkey = new Scanner("john\n6\n6\n6");
+        Animal monkey = new Monkey(scannerMonkey, System.out);
+        Scanner scannerRabbit = new Scanner("john\n3\n3\n3");
+        Animal rabbit = new Rabbit(scannerRabbit, System.out);
 
-        
+        boolean checkMonkey = clinic.checkAnimal(monkey);
+        boolean checkRabbit = clinic.checkAnimal(rabbit);
+
+        Assert.assertTrue(checkMonkey);
+        Assert.assertFalse(checkRabbit);
     }
+
 }

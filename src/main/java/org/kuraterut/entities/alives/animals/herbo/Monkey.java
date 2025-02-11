@@ -13,15 +13,15 @@ public class Monkey extends Herbo {
 
         out.println("Enter the food per day of the monkey:");
         int food = scanner.nextInt();
-        if(food < 0) throw new RuntimeException("Invalid monkey food per day");
+        if(food < 0) throw new IllegalArgumentException("Invalid monkey food per day");
 
         out.println("Enter the health level of the monkey(0-10):");
         int health = scanner.nextInt();
-        if(health < 0 || health > 10) throw new RuntimeException("Invalid monkey health level");
+        if(health < 0 || health > 10) throw new IllegalArgumentException("Invalid monkey health level");
 
         out.println("Enter the kindness level of the monkey(0-10):");
         int kindness = scanner.nextInt();
-        if(kindness < 0 || kindness > 10) throw new RuntimeException("Invalid monkey kindness level");
+        if(kindness < 0 || kindness > 10) throw new IllegalArgumentException("Invalid monkey kindness level");
 
         this.setName(name);
         this.setFood(food);
